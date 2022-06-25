@@ -1,0 +1,742 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+*{
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 10px;
+    grid-template-areas:"nav"
+                        "header"
+                        "main"
+                        "footer" ;
+}
+
+.navegacion{
+    grid-area: nav;       
+}
+
+.header{
+    grid-area: header;    
+}
+
+.main{
+    grid-area: main;    
+}
+
+.footer{
+    grid-area: footer;
+    text-align: center;
+    background-color: rgb(216, 175, 161);  
+}
+
+.navul{
+    list-style: none;
+  
+}
+
+.navegacion ul a{
+    text-decoration: none;      /*** le quita el subrayado al nav *****/
+    color: chocolate;    
+}
+
+.headerimg{
+    background-image: url(../img/fondoimg1.jpg);               
+}  
+
+h1{
+    font-family: Parisienne; 
+}
+
+
+
+/************************** para celular***************************/
+
+@media(min-width: 360px){
+    .contenedor{
+        grid-template-rows: auto auto auto 50px ;
+    }
+
+    /******navegacion ******/
+
+    .navegacion{
+        display: flex;
+        flex-direction: column;        
+    }
+
+    .navegacion .logo{
+        width: 45px;
+        height: 65px;        
+    }
+
+    
+    .navegacion ul a{
+        padding: 10px;
+        font-size: 30px;
+    }
+
+    .navegacion__titulo{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;  
+        font-size: 25px; 
+        color: rgb(148, 155, 52);     
+    }
+    /******* header  *******/
+    .headerimg{        
+        height: 250px;
+        width: 100%; 
+        background-size: cover;                  
+    }  
+
+    .headerimg h1{
+        color: rgb(8, 8, 8);
+        font-family: Parisienne;
+        font-size: 70px;
+        margin: 20px;          
+    }
+
+    .headerimg p{
+        color: rgb(2, 2, 2);
+        font-family: Parisienne;
+        font-size: 50px;  
+        margin: 20px; 
+        font-weight: 600;         
+    }
+    
+
+    /******main celular ******/
+
+    .main{
+        background-color: rgb(238, 196, 182);
+    }
+    iframe{
+        width: 90%;
+        height: 50vh;
+        margin: 20px;
+    }
+
+    .contenido p{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        padding: 10px;
+        margin:10px;
+    }
+
+    h3{
+        font-size: 50px;
+        padding: 10px;
+    }
+
+    .contenido2 p{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        padding: 10px;
+        margin:10px;
+    }
+
+    .contenido2 img{
+        width: 90%;
+        margin: 10px;
+    }
+
+    /******* footer ********/
+    
+    h4{
+        font-size: 18px;        
+    }
+}
+
+/********************* para tablets  ************************/
+
+@media(min-width: 768px){
+    .contenedor{
+        grid-template-rows: auto auto auto 50px ;
+    }
+
+    /******navegacion ******/
+
+    .navegacion{
+        display: flex;
+        flex-direction: column;        
+    }
+
+    .navegacion .logo{
+        width: 45px;
+        height: 65px;        
+    }
+
+    .navul{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        background-color: rgb(190, 183, 183);        
+    }
+}
+
+/*************** para tablets grandes ****************/
+
+@media(min-width: 1024px){
+    .contenedor{
+        grid-template-rows: auto auto auto 100px ;
+    }
+
+    .navegacion{
+        display: flex;
+        flex-direction: row; 
+        align-items: center;  
+        justify-content: space-between;     
+    }
+
+    .navul{        
+        background-color: rgb(252, 252, 252);        
+    }
+
+    .navul li a{
+        font-size: 23px;
+    }
+
+    .headerimg{
+        text-align: center;
+    }
+
+    iframe{
+        width: 90%;       
+        margin: 35px;
+        height: 600px;
+    }
+
+    .contenido p{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 15px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    h3{
+        font-size: 50px;
+        padding: 10px;
+    }
+
+    .contenidomain{
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .contenidomain .contenido2{
+        width: 30%;
+        padding: 10px;
+        
+    }
+
+    .contenidomain .contenido2 img{
+        width: 100%;
+        height: 400px;
+    }
+
+    .contenidomain .contenido2 p{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 18px;
+        padding: 5px;
+        margin: 5px;
+        text-align: center;        
+    }   
+}
+/************************ para PC ********************/
+
+@media(min-width: 1200px){
+    .contenedor{
+        grid-template-rows: 50px auto auto 50px ;
+    }
+
+    .navegacion .logo{
+        width: 38px;
+        height: 50px;  
+        margin: 8px;      
+    }
+
+    .headerimg{
+        background-size:auto;
+        text-align: center;
+    }
+
+    .contenido__titulo{
+        font-size: 35px;
+    }
+    
+    .contenido__parrafo{
+        font-size: 18px;
+    }
+
+    .contenido2 p{
+        font-size: 18px;
+    }
+
+    footer h4{
+        font-size: 15px;
+    }    
+}
+
+/***************************************   PAGINA    GALERIA       **********************/
+
+.contenedorgal {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 50px;
+    grid-template-areas:"encabezado"
+                        "contenido"
+                        "pie" ;
+}
+
+.headergal{
+    grid-area: encabezado;
+        
+}
+
+.maingal{
+    grid-area: contenido;  
+    background-color: rgb(238, 196, 182);  
+}
+
+.footergal{
+    grid-area: pie;  
+    text-align: center;
+    background-color: rgb(216, 175, 161);
+}
+
+/********************** para celular**********************/
+
+@media(min-width: 360px){
+    .contenedorgal{
+        grid-template-rows: auto auto auto 50px ;
+    }
+    
+    .maingal .imgprin{
+        width: 95%;
+        height: 280px;
+        background-size: cover;
+        padding: 10px;
+    }
+
+    h2{
+        padding: 10px;
+    }
+
+    h3{
+        font-size: 50px;
+        padding: 10px;
+    }
+
+    .imagenes p{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        padding: 10px;
+        margin:10px;
+    }
+
+    .maingal .imagenes .imagenes1 img{          
+        width: 95%;
+        margin: 10px;
+        height: 350px;  
+        padding: 10px;      
+    }
+
+    .maingal .imagenes2 img{          
+        width: 95%;
+        margin: 10px;
+        height: 350px; 
+        padding: 10px;       
+    }
+
+    h4{
+        font-size: 18px;        
+    }
+}
+
+/******************* para tablets  **********************/
+
+@media(min-width: 768px){
+    .maingal .imgprin{
+        background-size: cover;
+        padding: 20px;
+        height: 400px;
+    }
+
+    .maingal .imagenes .imagenes1 img{
+        background-size: cover;
+        padding: 20px;
+        height: 500px;
+    }
+
+    .maingal .imagenes2 img{
+        background-size: cover;
+        padding: 20px;
+        height: 500px;
+    }
+
+    .maingal .imagenes  .imagenes1 h3{
+        font-size: 35px;
+    }
+
+    .footergal h4{
+        font-size: 15px;
+    }
+
+}
+
+/*************** para tablets grandes ****************/
+
+@media(min-width: 1024px){
+
+    .maingal .imgprin{
+        background-size: cover;
+        padding: 30px;
+        height: 600px;
+    }
+
+    .maingal .imagenes{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .maingal .imagenes .imagenes1{
+        width: 30%;
+        
+    }
+
+    .maingal .imagenes .imagenes1 img{
+        width: 100%;
+        height: 300px;
+        padding: 10px;
+       
+        
+    }
+
+    .maingal .imagenes .imagenes1 h3{
+        font-size: 25px;
+        padding: 20px;
+    }
+
+    .imagenes .imagenes1 p{
+        font-size: 15px;
+    }
+
+    .maingal .imagenes2{
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+        padding: 10px;
+    }
+
+    .maingal .imagenes2 img{
+        width: 100%;
+        height: 300px;
+        padding: 10px;
+    }
+
+}
+
+/************  para PC **********/
+@media(min-width: 1200px){
+    .contenedorgal{
+        grid-template-rows: 70px auto auto 50px ;
+    }
+
+    .maingal h2{
+        font-size: 18px; 
+        
+    }
+
+    .maingal .imgprin{
+        width: 85%;
+        height: 700px;
+        
+    }
+
+
+
+    .maingal .imagenes .imagenes1 img{
+        width: 100%;
+        height: 500px;
+        padding: 25px;       
+    }
+
+    .maingal .imagenes .imagenes1 h3{
+        font-size: 20px;
+        padding: 25px;
+    }
+
+    .maingal .imagenes2{
+        width: 30%;
+        padding: 25px;
+    }
+    
+    .maingal .imagenes2 img{
+        width: 100%;
+        height: 500px;
+        padding: 25px;
+    }
+
+    .imagenes .imagenes1 p{
+        font-size: 13px;
+    }
+
+    .footergal h4{
+        font-size: 12px;
+    }
+}
+
+
+
+/********************* PAGINA TIENDA SIN @MEDIA ***************/
+
+.maingal .productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+}
+
+.maingal .productos .productos__resi{
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;    
+}
+
+.maingal .productos .productos__resi img{
+    width: 100%; 
+    padding: 20px;
+    height: 500px;
+}
+
+.maingal .productos .productos__resi p{
+    text-align: center;
+    padding: 2px;    
+}
+
+.maingal .productos .productos__resi button{
+    width: 40%;
+    font-size: 15px;
+    height: 25px;
+    margin: 0 auto;
+}
+
+.maingal .productos2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+}
+
+.maingal .productos2 .productos2__ofi{
+    width: 30%;
+    padding: 20px;
+}
+
+.maingal .productos2 .productos2__ofi img{
+    width: 100%; 
+    padding: 20px;
+    height: 500px;
+}
+
+.maingal .productos2 .productos2__ofi{
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;    
+}
+
+.maingal .productos2 .productos2__ofi p{
+    text-align: center;
+    padding: 2px;
+    font-size: 20px;    
+}
+
+.maingal .productos2 .productos2__ofi button{
+    width: 40%;
+    font-size: 15px;
+    height: 25px;
+    margin: 0 auto;
+}
+
+.maingal h3{
+    font-size: 30px;
+}
+
+.maingal p{
+    margin: 10px;
+}
+
+/**************************** pagina nosotros *******************/
+
+.contenedornos {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 70px auto 20px;
+    grid-template-areas:"header"
+                        "main"
+                        "footer" ;
+}
+
+.headernos{
+    grid-area: header;    
+}
+
+.mainnos{
+    grid-area: main;  
+    background-color:rgb(238, 196, 182) ;  
+}
+
+.footernos{
+    grid-area: footer;
+    text-align: center;
+    background-color: rgb(216, 175, 161);  
+}
+
+.mainnos .nosotros .imgnos{
+    width: 40%;
+    float: left;
+    margin-right: 2px;
+} 
+
+.mainnos .nosotros .imgnos img{
+    width: 100%;
+    padding: 30px;
+}
+
+.mainnos .nosotros .parrafonos p{
+    font-size: 18px;
+    padding: 10px;    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.mainnos h3{
+    font-size: 25px;
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.mainnos .nosotros2 .imgnos2{
+    width: 40%;
+    float: right;
+    margin-right: 2px;
+} 
+.mainnos .nosotros2 .imgnos2 img{
+    width: 100%;
+    padding: 20px;
+}
+
+.mainnos .nosotros2 .parrafonos{
+    font-size: 18px;
+    padding: 10px;    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/**************************** pagina contactos   ****************************/
+
+.contenedorcon {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 70px auto 20px;
+    grid-template-areas:"header"
+                        "main"
+                        "footer" ;
+}
+
+.headercon{
+    grid-area: header;    
+}
+
+.maincon{
+    grid-area: main;  
+    background-color:rgb(238, 196, 182) ;  
+}
+
+.footercon{
+    grid-area: footer;
+    text-align: center;
+    background-color: rgb(216, 175, 161);  
+}
+
+.maincon{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.maincon .formulario{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 10px;
+    border: 2px rgb(160, 52, 52) solid;
+    border-radius: 5px;
+    background-color: rgb(177, 172, 172);
+    margin: 5px;
+}
+
+.maincon .formulario label{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 2px;
+}
+
+.maincon .formulario input{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 2px;    
+}
+
+.formulario__boton{         /* le pongo flex rows a los botones del formulario para que queden uno a lado del otro */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.maincon .formulario input[type="submit"], .maincon .formulario input[type="reset"]{    /* le agrego propiedades a los botones enviar y limpiar */
+    border: 2px black solid;
+    border-radius: 5px;
+    background-color: rgb(82, 141, 197);
+    padding:5px;
+    margin: 0.5em;
+    width: 20%;
+}
+
+.maincon .redes {
+    padding: 10px;
+    width: 50%;
+    margin: 5px;
+    border: 2px rgb(160, 52, 52) solid;
+    border-radius: 5px;
+    background-color: rgb(177, 172, 172);
+}
+
+.maincon .redes p img{
+    width: 35px;
+    padding: 2px 2px 0 2px;
+    border-radius: 50%;
+}
+
+.maincon .redes h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+}
+
+.maincon .redes h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+}
+.maincon .redes p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.maincon .ubicacion{
+    width: 80%;    
+}
