@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/estilo.css">
     <link rel="shortcut icon" href="./assets/img/logo.jpg" type="image/x-icon">
     <title>Elegancia</title>
@@ -12,9 +13,12 @@
     <div class="navegacion">
         <div class="navegacion__titulo">
             <img class="logo" src="./assets/img/logo.jpg" alt="">
-            <h1>Elegancia</h1>
+            <h1 data-aos="fade-up"
+            data-aos-duration="3000">Elegancia</h1>
         </div>
-        <nav class="nav">
+        <nav data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="3000" class="nav">
             <ul class="navul">
                 <li><a href="./index.html">Inicio</a> </li> 
                 <li><a href="./assets/paginas/galeria.html">Galeria</a></li>
@@ -56,5 +60,9 @@
     <footer class="footer">
         <h4>©2022 Marcos Cepeda, todos los derechos reservados </h4>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
